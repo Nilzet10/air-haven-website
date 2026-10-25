@@ -20,7 +20,7 @@ To preview it, open `index.html` in any browser.
 - [ ] **Phone number.** I read **407-632-4137** off the van in the recording, but it was blurry and could be 407-**637**-4137. It appears in several places in `index.html` and `thanks.html`, so use find-and-replace on both `407-632-4137` and `+14076324137`.
 - [ ] **Photos.** Add the three photos listed in `images/README.txt`.
 - [ ] **Logo.** The shield logo is an SVG I recreated to match hers. If she has the original logo file, it can replace the `shield-logo` symbol near the bottom of `index.html`.
-- [ ] **"Read More Reviews" button.** It currently links to `#`. Point it at her Google Business Profile reviews (search `TODO` in `index.html`).
+- [ ] **"Read More Reviews" button.** It's hidden until she has a Google reviews link. The button is saved in a comment in `index.html` (search `TODO`): paste in the link and uncomment it.
 - [ ] **New copy I wrote.** The text from her draft is unchanged. These parts are new, so she should check they're accurate:
   - the three bullet points on each service card
   - the "How It Works" steps
@@ -41,9 +41,13 @@ git push
 ```
 
 **To use her domain (airhavenfl.com):**
+
+The domain currently points to her Squarespace site. Its DNS records go to Squarespace's servers, and `www` points to `ext-sq.squarespace.com`. Switching it over means editing those records wherever the domain is managed, most likely in her Squarespace **Domains** settings. After the switch, the Squarespace site stops showing on airhavenfl.com.
+
 1. In the repo on GitHub, go to **Settings → Pages → Custom domain**, enter `airhavenfl.com` and save.
-2. Where she bought the domain, add the DNS records GitHub lists in its "Managing a custom domain for your GitHub Pages site" guide. These are `A` records for the bare domain and a `CNAME` record for `www`.
+2. In her domain's DNS settings, replace the Squarespace records with the ones GitHub lists in its "Managing a custom domain for your GitHub Pages site" guide. These are `A` records for the bare domain and a `CNAME` record for `www` pointing to `nilzet10.github.io`.
 3. Once the domain is working, turn on **Enforce HTTPS** on the same Pages settings screen.
+4. Delete the `noindex` line in `index.html` (see the checklist above).
 
 ## Adding an online estimate form later
 
