@@ -9,8 +9,9 @@
   --navy: #0e2240;
   --navy-deep: #0a1930;
   --navy-line: rgba(255, 255, 255, .14);
-  --blue: #1b5fc6;      /* buttons and links: 6:1 with white */
-  --blue-dark: #154da6;
+  --blue: #1d6ad6;      /* her van blue: buttons, links, bands (5.1:1 with white) */
+  --blue-dark: #1656b5;
+  --blue-bright: #3b8ff0; /* swooshes and headline accent on navy */
   --sky: #8cc8f5;       /* accents on navy */
   --sky-soft: #e8f1fb;
   --ink: #13202f;
@@ -151,6 +152,14 @@ section { padding-block: clamp(64px, 9vw, 112px); }
 .section-navy { background: var(--navy); color: var(--on-navy); }
 .section-navy h2,
 .section-navy h3 { color: #fff; }
+.section-blue { background: var(--blue); color: #fff; }
+.section-blue h2,
+.section-blue h3,
+.section-blue .section-intro p { color: #fff; }
+.section-blue .sign-list { border-top-color: #fff; }
+.section-blue .sign-list li { border-bottom-color: rgba(255, 255, 255, .3); }
+.section-blue .photo { background: #3d82e0; }
+.section-blue .photo-placeholder { color: rgba(255, 255, 255, .55); }
 
 .section-intro {
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -160,25 +169,41 @@ section { padding-block: clamp(64px, 9vw, 112px); }
 .section-intro p { margin: 0; color: var(--muted); font-size: 1.08rem; max-width: 56ch; }
 
 /* ---------- Hero ---------- */
-.hero { background: var(--navy); color: var(--on-navy); padding-block: clamp(56px, 8vw, 104px); }
+.hero {
+  position: relative; overflow: hidden;
+  background: var(--navy); color: var(--on-navy);
+  padding-block: clamp(64px, 9vw, 120px);
+}
+.hero-swoosh {
+  position: absolute; z-index: 0; pointer-events: none;
+  right: -3%; bottom: -8%;
+  width: min(64%, 920px); height: auto;
+}
 .hero-inner {
+  position: relative; z-index: 1;
   display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, .7fr);
   gap: clamp(32px, 6vw, 88px); align-items: center;
 }
 .hero-kicker { color: var(--sky); font-weight: 600; font-size: 1.02rem; margin-bottom: 1.1rem; }
 .hero h1 { color: #fff; margin-bottom: .45em; }
-.hero h1 .accent { color: var(--sky); }
+.hero h1 .accent { color: var(--blue-bright); }
 .hero-lede { font-size: 1.18rem; max-width: 38ch; margin-bottom: 2rem; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 2.5rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
-.hero-facts {
-  list-style: none; margin: 0; padding: 1.5rem 0 0;
-  border-top: 1px solid var(--navy-line);
-  display: flex; flex-wrap: wrap; gap: 12px 32px;
-  color: #fff; font-weight: 600; font-size: .97rem;
+/* ---------- Facts band ---------- */
+.facts-band { background: var(--blue); color: #fff; padding-block: 0; }
+.facts-list {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
 }
-.hero-facts li { display: inline-flex; align-items: center; gap: 8px; }
-.hero-facts svg { width: 18px; height: 18px; color: var(--sky); flex: none; }
+.facts-list li {
+  display: flex; align-items: center; gap: 14px;
+  padding: 26px 24px;
+  font-stretch: var(--wide); font-weight: 700; font-size: 1.08rem; line-height: 1.25;
+}
+.facts-list li:first-child { padding-left: 0; }
+.facts-list li + li { border-left: 1px solid rgba(255, 255, 255, .3); }
+.facts-list svg { width: 30px; height: 30px; flex: none; }
 
 /* Estimate card (hero) and contact card share these parts */
 .estimate-card,
@@ -211,7 +236,7 @@ section { padding-block: clamp(64px, 9vw, 112px); }
 .service-icon {
   flex: none; width: 48px; height: 48px; border-radius: var(--radius);
   display: grid; place-items: center;
-  color: var(--blue); background: var(--sky-soft);
+  color: #fff; background: var(--blue);
 }
 .service-icon svg { width: 26px; height: 26px; }
 .service > p { color: var(--muted); margin-bottom: 18px; }
@@ -366,6 +391,14 @@ section { padding-block: clamp(64px, 9vw, 112px); }
 
   .hero-inner { grid-template-columns: minmax(0, 1fr); }
   .estimate-card { display: none; }
+  /* swooshes sit in their own space under the buttons so they never sit behind text */
+  .hero { padding-bottom: 250px; }
+  .hero-swoosh { width: 440px; height: 313px; right: -96px; bottom: 4px; }
+
+  .facts-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .facts-list li { padding: 20px 16px; }
+  .facts-list li:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .facts-list li:nth-child(n+3) { border-top: 1px solid rgba(255, 255, 255, .3); }
 
   .section-intro,
   .about-inner,
@@ -400,6 +433,8 @@ section { padding-block: clamp(64px, 9vw, 112px); }
   .signs-lists,
   .checks-2col { grid-template-columns: minmax(0, 1fr); }
   .service { padding: 24px 22px; }
+  .facts-list li { gap: 10px; padding: 16px 10px; font-size: .95rem; }
+  .facts-list svg { width: 24px; height: 24px; }
   .hero-actions .btn { flex: 1 1 100%; }
   .estimate-actions { grid-template-columns: minmax(0, 1fr); }
   .footer-inner { grid-template-columns: minmax(0, 1fr); }

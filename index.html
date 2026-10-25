@@ -95,6 +95,14 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero">
+      <!-- The three airflow swooshes from her logo, large and flat -->
+      <svg class="hero-swoosh" viewBox="0 0 900 640" aria-hidden="true" focusable="false">
+        <g fill="none" stroke-linecap="round">
+          <path d="M60 600 C330 560 620 400 860 40" stroke="#1d6ad6" stroke-width="88"/>
+          <path d="M250 700 C500 650 740 520 940 250" stroke="#3b8ff0" stroke-width="58"/>
+          <path d="M430 780 C620 730 800 640 960 440" stroke="#8cc8f5" stroke-width="38"/>
+        </g>
+      </svg>
       <div class="container hero-inner">
         <div class="hero-copy">
           <p class="hero-kicker">Air duct cleaning &amp; HVAC system restoration</p>
@@ -104,11 +112,6 @@
             <a class="btn btn-primary btn-lg" href="#contact">Get a free estimate</a>
             <a class="btn btn-outline-light btn-lg" href="#services">See our services</a>
           </div>
-          <ul class="hero-facts">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Local &amp; family-owned</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Free estimates</li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-check"/></svg>Homes &amp; businesses</li>
-          </ul>
         </div>
 
         <aside class="estimate-card" aria-labelledby="estimate-title">
@@ -133,6 +136,18 @@
             </ul>
           </div>
         </aside>
+      </div>
+    </section>
+
+    <!-- ============ FACTS BAND ============ -->
+    <section class="facts-band" aria-label="Why Air Haven">
+      <div class="container">
+        <ul class="facts-list">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-home"/></svg>Local &amp; family&#8209;owned</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-clipboard"/></svg>Free estimates</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-building"/></svg>Homes &amp; businesses</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>Orlando &amp; Central Florida</li>
+        </ul>
       </div>
     </section>
 
@@ -202,28 +217,8 @@
       </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
-    <section class="about section-soft" id="about">
-      <div class="container about-inner">
-        <div class="photo photo-landscape">
-          <img src="images/van-orlando.jpg" alt="Air Haven service van in front of the Orlando skyline" loading="lazy" onerror="this.remove()">
-          <div class="photo-placeholder"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#shield-logo"/></svg></div>
-        </div>
-        <div class="about-copy">
-          <h2>Your local indoor air quality experts</h2>
-          <p>Air Haven is a local, family-owned business serving homes and businesses throughout Orlando and the surrounding communities. From air duct cleaning to HVAC restoration, we bring knowledgeable service and attention to detail to every home we work in.</p>
-          <ul class="checks checks-2col">
-            <li>Local &amp; family-owned</li>
-            <li>Experienced &amp; knowledgeable</li>
-            <li>Professional &amp; detailed</li>
-            <li>Focused on cleaner indoor air</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
     <!-- ============ SIGNS ============ -->
-    <section class="signs" id="signs">
+    <section class="signs section-blue" id="signs">
       <div class="container">
         <div class="section-intro">
           <h2>Signs it&rsquo;s time for a cleaning</h2>
@@ -255,6 +250,26 @@
               </ul>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about section-soft" id="about">
+      <div class="container about-inner">
+        <div class="photo photo-landscape">
+          <img src="images/van-orlando.jpg" alt="Air Haven service van in front of the Orlando skyline" loading="lazy" onerror="this.remove()">
+          <div class="photo-placeholder"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#shield-logo"/></svg></div>
+        </div>
+        <div class="about-copy">
+          <h2>Your local indoor air quality experts</h2>
+          <p>Air Haven is a local, family-owned business serving homes and businesses throughout Orlando and the surrounding communities. From air duct cleaning to HVAC restoration, we bring knowledgeable service and attention to detail to every home we work in.</p>
+          <ul class="checks checks-2col">
+            <li>Local &amp; family-owned</li>
+            <li>Experienced &amp; knowledgeable</li>
+            <li>Professional &amp; detailed</li>
+            <li>Focused on cleaner indoor air</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -421,6 +436,9 @@
     <symbol id="i-air" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h11a3 3 0 1 0-3-3"/><path d="M3 12h16a3 3 0 1 1-3 3"/><path d="M3 16h7"/></g></symbol>
     <symbol id="i-hvac" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="12" cy="12" r="4.5"/><path d="M12 7.5v9M7.5 12h9M8.8 8.8l6.4 6.4M15.2 8.8l-6.4 6.4"/></g></symbol>
     <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A1.5 1.5 0 0 1 4 14.5Z"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5.5h4V20"/></g></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4.5" width="14" height="16.5" rx="2"/><path d="M9 3h6v3H9z"/><path d="m9 13.5 2 2 4-4"/></g></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="3" width="15" height="18" rx="1.5"/><path d="M8.5 7h2M13.5 7h2M8.5 11h2M13.5 11h2M8.5 15h2M13.5 15h2M10.5 21v-3h3v3"/></g></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></g></symbol>
   </svg>
 
