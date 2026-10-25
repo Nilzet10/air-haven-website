@@ -8,9 +8,9 @@ To preview it, open `index.html` in any browser.
 
 | File | What it is |
 | --- | --- |
-| `index.html` | The whole site: hero, about, services, review, why-us, how-it-works, FAQ, call/text box |
-| `styles.css` | All styling (brand colors are at the top under `:root`) |
-| `script.js` | Mobile menu, header shadow, fade-in effects |
+| `index.html` | The whole site: hero with estimate card, services, about, signs it's time, review, FAQ, contact |
+| `styles.css` | All styling (brand colors and fonts are at the top under `:root`) |
+| `script.js` | Mobile menu and header shadow |
 | `thanks.html` | Not used yet. It's the "thank you" page for when an online estimate form is added. |
 | `favicon.svg` | The browser tab icon |
 | `images/` | Where her photos go (see `images/README.txt`) |
