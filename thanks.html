@@ -8,39 +8,33 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .thanks { min-height: 100vh; display: grid; place-items: center; text-align: center; }
+    .thanks-inner { display: grid; justify-items: center; }
+    .thanks-mark { width: 64px; height: 64px; color: var(--sky); margin-bottom: 24px; }
+    .thanks .hero-lede { margin-inline: auto; }
+    .thanks .hero-actions { justify-content: center; margin-bottom: 0; }
+  </style>
 </head>
 <body>
   <main class="hero thanks">
     <div class="container thanks-inner">
       <svg class="thanks-mark" viewBox="0 0 64 64" aria-hidden="true">
-        <defs>
-          <linearGradient id="tg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#8fdcff"/>
-            <stop offset="1" stop-color="#2e8bef"/>
-          </linearGradient>
-        </defs>
-        <g fill="none" stroke="url(#tg)" stroke-linecap="round" stroke-linejoin="round">
+        <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
           <path d="M32 4 L56 11.5 V30 C56 45 46 54.5 32 60 C18 54.5 8 45 8 30 V11.5 Z" stroke-width="4.5"/>
           <path d="m21 32 7.5 7.5L44 24" stroke-width="5"/>
         </g>
       </svg>
-      <p class="eyebrow eyebrow-light">Request received</p>
+      <p class="hero-kicker">Request received</p>
       <h1>Thank you!</h1>
       <p class="hero-lede">We&rsquo;ve got your estimate request and will be in touch soon. Need us sooner? Give us a call.</p>
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg" href="tel:+14076324137">Call 407-632-4137</a>
-        <a class="btn btn-ghost btn-lg" href="index.html">Back to home</a>
+        <a class="btn btn-outline-light btn-lg" href="index.html">Back to home</a>
       </div>
     </div>
   </main>
-  <style>
-    .thanks { margin-top: 0; min-height: 100vh; display: grid; place-items: center; text-align: center; }
-    .thanks-inner { position: relative; z-index: 1; display: grid; justify-items: center; }
-    .thanks-mark { width: 84px; height: 84px; margin-bottom: 24px; }
-    .thanks .hero-lede { margin-inline: auto; }
-    .thanks .hero-actions { justify-content: center; }
-  </style>
 </body>
 </html>
