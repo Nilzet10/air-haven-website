@@ -1,0 +1,54 @@
+# Air Haven website
+
+A one-page site for Air Haven (air duct cleaning and HVAC restoration in Central Florida). It's rebuilt from her Squarespace draft and keeps the same sections, copy and navy/blue look.
+
+To preview it, open `index.html` in any browser.
+
+## Files
+
+| File | What it is |
+| --- | --- |
+| `index.html` | The whole site: hero, about, services, review, why-us, how-it-works, FAQ, call/text box |
+| `styles.css` | All styling (brand colors are at the top under `:root`) |
+| `script.js` | Mobile menu, header shadow, fade-in effects |
+| `thanks.html` | Not used yet. It's the "thank you" page for when an online estimate form is added. |
+| `favicon.svg` | The browser tab icon |
+| `images/` | Where her photos go (see `images/README.txt`) |
+
+## Confirm before launch
+
+- [ ] **Phone number.** I read **407-632-4137** off the van in the recording, but it was blurry and could be 407-**637**-4137. It appears in several places in `index.html` and `thanks.html`, so use find-and-replace on both `407-632-4137` and `+14076324137`.
+- [ ] **Photos.** Add the three photos listed in `images/README.txt`.
+- [ ] **Logo.** The shield logo is an SVG I recreated to match hers. If she has the original logo file, it can replace the `shield-logo` symbol near the bottom of `index.html`.
+- [ ] **"Read More Reviews" button.** It currently links to `#`. Point it at her Google Business Profile reviews (search `TODO` in `index.html`).
+- [ ] **New copy I wrote.** The text from her draft is unchanged. These parts are new, so she should check they're accurate:
+  - the three bullet points on each service card
+  - the "How It Works" steps
+  - all FAQ answers (her draft only had the first question)
+- [ ] **Extra details** she may want to add: email address, business hours, license/insurance info, and a list of the cities she serves.
+- [ ] **Let Google list the site.** While it's a draft, `index.html` has a `<meta name="robots" content="noindex">` tag that keeps it out of search results. Delete that line at launch.
+
+## Hosting: GitHub Pages
+
+The site is published from this folder's GitHub repo with GitHub Pages, which is free.
+
+**To update the site,** edit the files, then run these commands in this folder. The live site refreshes about a minute later.
+
+```bash
+git add -A
+git commit -m "Describe the change"
+git push
+```
+
+**To use her domain (airhavenfl.com):**
+1. In the repo on GitHub, go to **Settings → Pages → Custom domain**, enter `airhavenfl.com` and save.
+2. Where she bought the domain, add the DNS records GitHub lists in its "Managing a custom domain for your GitHub Pages site" guide. These are `A` records for the bare domain and a `CNAME` record for `www`.
+3. Once the domain is working, turn on **Enforce HTTPS** on the same Pages settings screen.
+
+## Adding an online estimate form later
+
+GitHub Pages can't receive form submissions, so for now visitors call or text. To collect requests online, either:
+- sign up for a form service like [Formspree](https://formspree.io), which emails her each request, and point a form at it, or
+- move hosting to Netlify, which has built-in forms.
+
+Both would also use `thanks.html` as the page people see after sending a request.
