@@ -8,7 +8,7 @@ To preview it, open `index.html` in any browser.
 
 | File | What it is |
 | --- | --- |
-| `index.html` | The whole site: hero with estimate card, services, about, signs it's time, review, FAQ, contact |
+| `index.html` | The whole site: hero with the van photo, facts bar, services grid, signs it's time, about + review, FAQ, contact |
 | `styles.css` | All styling (brand colors and fonts are at the top under `:root`) |
 | `script.js` | Mobile menu and header shadow |
 | `thanks.html` | Not used yet. It's the "thank you" page for when an online estimate form is added. |
@@ -42,14 +42,38 @@ git commit -m "Describe the change"
 git push
 ```
 
-**To use her domain (airhavenfl.com):**
+## Launching on airhavenfl.com
 
-The domain currently points to her Squarespace site. Its DNS records go to Squarespace's servers, and `www` points to `ext-sq.squarespace.com`. Switching it over means editing those records wherever the domain is managed, most likely in her Squarespace **Domains** settings. After the switch, the Squarespace site stops showing on airhavenfl.com.
+**How the domain is set up today (checked Oct 26, 2026):**
+- Registered at **GoDaddy**; renews **Sept 6, 2027**. Keep auto-renew on.
+- Its DNS is managed by **Squarespace** (the nameservers are `ns01–ns04.squarespacedns.com`), so the website records are edited in Squarespace.
+- **Her email runs on this domain through Google.** These records must stay exactly as they are:
+  - `MX` → `smtp.google.com`
+  - `TXT` → `v=spf1 include:dc-bdaca08905._spfm.airhavenfl.com ~all`
+  - `TXT` → `google-site-verification=…`
 
-1. In the repo on GitHub, go to **Settings → Pages → Custom domain**, enter `airhavenfl.com` and save.
-2. In her domain's DNS settings, replace the Squarespace records with the ones GitHub lists in its "Managing a custom domain for your GitHub Pages site" guide. These are `A` records for the bare domain and a `CNAME` record for `www` pointing to `nilzet10.github.io`.
-3. Once the domain is working, turn on **Enforce HTTPS** on the same Pages settings screen.
-4. Delete the `noindex` line in `index.html` (see the checklist above).
+**Steps:**
+
+1. **Verify the domain with GitHub** (recommended, so no one else can claim it). On github.com go to **Settings → Pages → Add a domain**, enter `airhavenfl.com`, and GitHub shows a `TXT` record (name like `_github-pages-challenge-Nilzet10`). Add that TXT record in Squarespace (step 2's screen), then click **Verify** on GitHub.
+2. **Change the website records in Squarespace.** Log in to her Squarespace account and go to **Settings → Domains → airhavenfl.com → DNS** (labels may differ slightly).
+   - Delete the **Squarespace Defaults** website records: the four `A` records (`198.185.159.144`, `198.185.159.145`, `198.49.23.144`, `198.49.23.145`) and the `www` `CNAME` → `ext-sq.squarespace.com`.
+   - **Don't touch** the Google `MX` record or the `TXT` records.
+   - Add these custom records:
+
+     | Type | Host | Value |
+     | --- | --- | --- |
+     | A | @ | 185.199.108.153 |
+     | A | @ | 185.199.109.153 |
+     | A | @ | 185.199.110.153 |
+     | A | @ | 185.199.111.153 |
+     | CNAME | www | nilzet10.github.io |
+3. **Point the GitHub site at the domain.** In the repo, go to **Settings → Pages → Custom domain**, enter `airhavenfl.com` and save.
+4. **Wait for DNS** (usually minutes, sometimes a few hours). When GitHub's DNS check passes, tick **Enforce HTTPS** on the same screen.
+5. **Let Google list the site.** Delete the `noindex` line in `index.html` and push.
+
+After this, the `nilzet10.github.io/air-haven-website` link forwards to airhavenfl.com automatically.
+
+**Before canceling anything at Squarespace:** her DNS lives on Squarespace's nameservers, and the SPF record suggests her Google email was set up through Squarespace. Canceling the Squarespace subscription could break her email and the website records. First check whether her Google Workspace is billed through Squarespace. If she wants to leave Squarespace completely, move the DNS to GoDaddy first and recreate the email records there.
 
 ## Adding an online estimate form later
 

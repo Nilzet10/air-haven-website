@@ -9,7 +9,7 @@
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <meta name="theme-color" content="#0e2240">
-  <!-- Draft: keeps search engines away until the phone number and photos are confirmed. Remove at launch. -->
+  <!-- Draft: keeps search engines away until the site moves to airhavenfl.com. Remove at launch. -->
   <meta name="robots" content="noindex">
 
   <meta property="og:type" content="website">
@@ -96,7 +96,7 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero">
-      <!-- The three airflow swooshes from her logo, large and flat -->
+      <!-- The airflow swooshes from her van wrap, large and flat, behind the photo -->
       <svg class="hero-swoosh" viewBox="0 0 900 640" aria-hidden="true" focusable="false">
         <g fill="none" stroke-linecap="round">
           <path d="M60 600 C330 560 620 400 860 40" stroke="#1d6ad6" stroke-width="88"/>
@@ -106,41 +106,37 @@
       </svg>
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="hero-kicker">Air duct cleaning &amp; HVAC system restoration</p>
+          <p class="hero-kicker">Air duct cleaning &amp; HVAC restoration</p>
           <h1>Breathe better.<br><span class="accent">Live better.</span></h1>
           <p class="hero-lede">Professional air duct cleaning, dryer vent cleaning and HVAC restoration for Central Florida homes and businesses.</p>
           <div class="hero-actions">
             <a class="btn btn-primary btn-lg" href="#contact">Get a free estimate</a>
-            <a class="btn btn-outline-light btn-lg" href="#services">See our services</a>
+            <a class="btn btn-outline-light btn-lg" href="tel:+14076374137">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg> 407-637-4137
+            </a>
           </div>
+          <figure class="hero-proof">
+            <div class="stars" role="img" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
+            </div>
+            <blockquote>&ldquo;I highly recommend this family-owned company!&rdquo;</blockquote>
+            <figcaption>Sarah M.</figcaption>
+          </figure>
         </div>
 
-        <aside class="estimate-card" aria-labelledby="estimate-title">
-          <p class="estimate-label" id="estimate-title">Free estimates</p>
-          <a class="estimate-number" href="tel:+14076374137">407-637-4137</a>
-          <p class="estimate-note">Call or text and we&rsquo;ll talk through what your home or business needs.</p>
-          <div class="estimate-actions">
-            <a class="btn btn-primary" href="tel:+14076374137">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg> Call now
-            </a>
-            <a class="btn btn-outline" href="sms:+14076374137">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg> Send a text
-            </a>
+        <div class="hero-media">
+          <div class="hero-photo">
+            <img src="images/van-orlando.webp" alt="Air Haven service van parked by Lake Eola with the Orlando skyline behind it" width="1536" height="1024" fetchpriority="high">
           </div>
-          <div class="estimate-services">
-            <p>We can help with</p>
-            <ul class="checks">
-              <li>Air duct cleaning</li>
-              <li>Dryer vent cleaning</li>
-              <li>Indoor air quality</li>
-              <li>HVAC restoration</li>
-            </ul>
-          </div>
-        </aside>
+          <a class="hero-badge" href="tel:+14076374137">
+            <span class="hero-badge-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg></span>
+            <span class="hero-badge-text"><small>Free estimates &middot; call or text</small><strong>407-637-4137</strong></span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <!-- ============ FACTS BAND ============ -->
+    <!-- ============ FACTS ============ -->
     <section class="facts-band" aria-label="Why Air Haven">
       <div class="container">
         <ul class="facts-list">
@@ -160,12 +156,15 @@
           <p>From routine cleaning to complete HVAC system restoration, Air Haven provides solutions designed to improve your indoor air and help your system perform at its best.</p>
         </div>
 
-        <div class="service-grid">
+        <div class="bento">
+          <figure class="bento-photo">
+            <img src="images/tech-blower.webp" alt="Air Haven technician cleaning an HVAC blower wheel" width="1019" height="1544" loading="lazy">
+            <figcaption>Cleaning a blower wheel during an HVAC restoration</figcaption>
+          </figure>
+
           <article class="service">
-            <div class="service-head">
-              <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-duct"/></svg></span>
-              <h3>Air duct cleaning</h3>
-            </div>
+            <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-duct"/></svg></span>
+            <h3>Air duct cleaning</h3>
             <p>Remove built-up dust, debris, and contaminants from your ductwork.</p>
             <ul class="checks">
               <li>Supply &amp; return ducts</li>
@@ -175,10 +174,8 @@
           </article>
 
           <article class="service">
-            <div class="service-head">
-              <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-vent"/></svg></span>
-              <h3>Dryer vent cleaning</h3>
-            </div>
+            <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-vent"/></svg></span>
+            <h3>Dryer vent cleaning</h3>
             <p>Improve dryer efficiency and help reduce the risk of lint-related fires.</p>
             <ul class="checks">
               <li>Full vent line cleared</li>
@@ -188,10 +185,8 @@
           </article>
 
           <article class="service">
-            <div class="service-head">
-              <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-air"/></svg></span>
-              <h3>Indoor air quality</h3>
-            </div>
+            <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-air"/></svg></span>
+            <h3>Indoor air quality</h3>
             <p>Target airborne pollutants and create a healthier indoor environment.</p>
             <ul class="checks">
               <li>Fewer allergens &amp; odors</li>
@@ -201,10 +196,8 @@
           </article>
 
           <article class="service">
-            <div class="service-head">
-              <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hvac"/></svg></span>
-              <h3>HVAC restoration</h3>
-            </div>
+            <span class="service-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-hvac"/></svg></span>
+            <h3>HVAC restoration</h3>
             <p>Deep clean and restore your HVAC system for better performance.</p>
             <ul class="checks">
               <li>Blower &amp; air handler cleaning</li>
@@ -219,47 +212,46 @@
     </section>
 
     <!-- ============ SIGNS ============ -->
-    <section class="signs section-blue" id="signs">
+    <section class="signs" id="signs">
       <div class="container">
-        <div class="section-intro">
-          <h2>Signs it&rsquo;s time for a cleaning</h2>
-          <p>Florida&rsquo;s heat and humidity keep AC systems running most of the year, so dust and lint build up quickly. Here are a few common signs to watch for.</p>
-        </div>
-        <div class="signs-inner">
-          <div class="photo photo-portrait">
-            <img src="images/tech-ladder.webp" alt="Air Haven technician on a ladder cleaning a ceiling air vent" width="1062" height="1481" loading="lazy">
+        <div class="panel section-blue">
+          <div class="section-intro">
+            <h2>Signs it&rsquo;s time for a cleaning</h2>
+            <p>Florida&rsquo;s heat and humidity keep AC systems running most of the year, so dust and lint build up quickly. Here are a few common signs to watch for.</p>
           </div>
-          <div class="signs-lists">
-            <div>
-              <h3>Air ducts &amp; HVAC</h3>
-              <ul class="sign-list">
-                <li>Dust blowing from the vents, or settling again soon after you clean</li>
-                <li>A musty smell when the AC turns on</li>
-                <li>Dust or debris around the supply registers and return grilles</li>
-                <li>Allergies that seem worse at home</li>
-                <li>A recent renovation, or you just moved in</li>
-              </ul>
+          <div class="signs-inner">
+            <div class="photo photo-portrait">
+              <img src="images/tech-ladder.webp" alt="Air Haven technician on a ladder cleaning a ceiling air vent" width="1062" height="1481" loading="lazy">
             </div>
-            <div>
-              <h3>Dryer vent</h3>
-              <ul class="sign-list">
-                <li>Clothes need more than one cycle to dry</li>
-                <li>The dryer or laundry room feels unusually hot</li>
-                <li>A burning smell while the dryer runs</li>
-                <li>Lint collecting around the outside vent flap</li>
-              </ul>
+            <div class="signs-lists">
+              <div>
+                <h3>Air ducts &amp; HVAC</h3>
+                <ul class="sign-list">
+                  <li>Dust blowing from the vents, or settling again soon after you clean</li>
+                  <li>A musty smell when the AC turns on</li>
+                  <li>Dust or debris around the supply registers and return grilles</li>
+                  <li>Allergies that seem worse at home</li>
+                  <li>A recent renovation, or you just moved in</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Dryer vent</h3>
+                <ul class="sign-list">
+                  <li>Clothes need more than one cycle to dry</li>
+                  <li>The dryer or laundry room feels unusually hot</li>
+                  <li>A burning smell while the dryer runs</li>
+                  <li>Lint collecting around the outside vent flap</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ ABOUT ============ -->
+    <!-- ============ ABOUT + REVIEW ============ -->
     <section class="about section-soft" id="about">
       <div class="container about-inner">
-        <div class="photo photo-landscape">
-          <img src="images/van-orlando.webp" alt="Air Haven service van parked by Lake Eola with the Orlando skyline behind it" width="1536" height="1024" loading="lazy">
-        </div>
         <div class="about-copy">
           <h2>Your local indoor air quality experts</h2>
           <p>Air Haven is a local, family-owned business serving homes and businesses throughout Orlando and the surrounding communities. From air duct cleaning to HVAC restoration, we bring knowledgeable service and attention to detail to every home we work in.</p>
@@ -270,13 +262,8 @@
             <li>Focused on cleaner indoor air</li>
           </ul>
         </div>
-      </div>
-    </section>
 
-    <!-- ============ REVIEW ============ -->
-    <section class="review section-navy" id="reviews">
-      <div class="container review-inner">
-        <figure class="review-quote">
+        <figure class="review-card" id="reviews">
           <h2 class="review-heading">What our customers say</h2>
           <div class="stars" role="img" aria-label="5 out of 5 stars">
             <svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg><svg viewBox="0 0 24 24"><use href="#i-star"/></svg>
@@ -286,11 +273,8 @@
           </blockquote>
           <figcaption>Sarah M.</figcaption>
           <!-- TODO: once she has a Google reviews link, add it back here:
-          <a class="btn btn-outline-light" href="GOOGLE-REVIEWS-LINK" target="_blank" rel="noopener">Read more reviews on Google</a> -->
+          <a class="btn btn-outline" href="GOOGLE-REVIEWS-LINK" target="_blank" rel="noopener">Read more reviews on Google</a> -->
         </figure>
-        <div class="photo photo-portrait">
-          <img src="images/tech-blower.webp" alt="Air Haven technician cleaning an HVAC blower wheel" width="1019" height="1544" loading="lazy">
-        </div>
       </div>
     </section>
 
@@ -332,42 +316,52 @@
     </section>
 
     <!-- ============ CONTACT ============ -->
-    <section class="contact section-navy" id="contact">
-      <div class="container contact-inner">
-        <div class="contact-copy">
-          <h2>Get your free estimate</h2>
-          <p>Call or text and we&rsquo;ll talk through what your home or business needs. Estimates are free.</p>
-          <ol class="next-steps">
-            <li><strong>Call or text us</strong>Tell us a little about your home or business and what you&rsquo;re noticing.</li>
-            <li><strong>Get your free estimate</strong>We&rsquo;ll explain what we recommend and why.</li>
-            <li><strong>Breathe easier</strong>Enjoy cleaner air and a system that runs the way it should.</li>
-          </ol>
-        </div>
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="panel section-navy contact-panel">
+          <svg class="panel-swoosh" viewBox="0 0 900 640" aria-hidden="true" focusable="false">
+            <g fill="none" stroke-linecap="round">
+              <path d="M60 600 C330 560 620 400 860 40" stroke="#1d6ad6" stroke-width="88"/>
+              <path d="M250 700 C500 650 740 520 940 250" stroke="#3b8ff0" stroke-width="58"/>
+            </g>
+          </svg>
+          <div class="contact-inner">
+            <div class="contact-copy">
+              <h2>Get your free estimate</h2>
+              <p>Call or text and we&rsquo;ll talk through what your home or business needs. Estimates are free.</p>
+              <ol class="next-steps">
+                <li><strong>Call or text us</strong>Tell us a little about your home or business and what you&rsquo;re noticing.</li>
+                <li><strong>Get your free estimate</strong>We&rsquo;ll explain what we recommend and why.</li>
+                <li><strong>Breathe easier</strong>Enjoy cleaner air and a system that runs the way it should.</li>
+              </ol>
+            </div>
 
-        <div class="contact-card">
-          <p class="estimate-label">Call or text</p>
-          <a class="estimate-number" href="tel:+14076374137">407-637-4137</a>
-          <div class="estimate-actions">
-            <a class="btn btn-primary btn-lg" href="tel:+14076374137">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg> Call now
-            </a>
-            <a class="btn btn-outline btn-lg" href="sms:+14076374137">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg> Send a text
-            </a>
+            <div class="contact-card">
+              <p class="estimate-label">Call or text</p>
+              <a class="estimate-number" href="tel:+14076374137">407-637-4137</a>
+              <div class="estimate-actions">
+                <a class="btn btn-primary btn-lg" href="tel:+14076374137">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-phone"/></svg> Call now
+                </a>
+                <a class="btn btn-outline btn-lg" href="sms:+14076374137">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-chat"/></svg> Send a text
+                </a>
+              </div>
+              <div class="contact-ready">
+                <p>Helpful to have ready</p>
+                <ul class="checks">
+                  <li>Your address or ZIP code</li>
+                  <li>The service you&rsquo;re interested in</li>
+                  <li>Rough home size or number of vents</li>
+                  <li>A good time to reach you</li>
+                </ul>
+              </div>
+              <p class="contact-area">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>
+                Serving Orlando &amp; Central Florida
+              </p>
+            </div>
           </div>
-          <div class="contact-ready">
-            <p>Helpful to have ready</p>
-            <ul class="checks">
-              <li>Your address or ZIP code</li>
-              <li>The service you&rsquo;re interested in</li>
-              <li>Rough home size or number of vents</li>
-              <li>A good time to reach you</li>
-            </ul>
-          </div>
-          <p class="contact-area">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pin"/></svg>
-            Serving Orlando &amp; Central Florida
-          </p>
         </div>
       </div>
     </section>
