@@ -12,18 +12,20 @@ To preview it, open `index.html` in any browser.
 | `styles.css` | All styling (brand colors and fonts are at the top under `:root`) |
 | `script.js` | Mobile menu and header shadow |
 | `thanks.html` | Not used yet. It's the "thank you" page for when an online estimate form is added. |
-| `favicon.svg` | The browser tab icon |
-| `images/` | Where her photos go (see `images/README.txt`) |
+| `favicon.png`, `apple-touch-icon.png` | Browser tab and phone home-screen icons, made from her logo |
+| `images/` | Her photos, logo mark and the link-preview image (see `images/README.txt`) |
 
 ## Confirm before launch
 
-- [ ] **Phone number.** I read **407-632-4137** off the van in the recording, but it was blurry and could be 407-**637**-4137. It appears in several places in `index.html` and `thanks.html`, so use find-and-replace on both `407-632-4137` and `+14076324137`.
-- [ ] **Photos.** Add the three photos listed in `images/README.txt`.
-- [ ] **Logo.** The shield logo is an SVG I recreated to match hers. If she has the original logo file, it can replace the `shield-logo` symbol near the bottom of `index.html`.
+- [x] **Phone number.** Confirmed as 407-637-4137. To change it later, find-and-replace both `407-637-4137` and `+14076374137` in `index.html` and `thanks.html`.
+- [x] **Photos.** Added: the van, the technician with the blower, and the technician on the ladder.
+- [x] **Logo.** Her logo mark is used in the header, footer, icons and link-preview image.
+- [ ] **Before-and-after photos.** Dirty vs. clean duct shots would make a strong new section.
 - [ ] **"Read More Reviews" button.** It's hidden until she has a Google reviews link. The button is saved in a comment in `index.html` (search `TODO`): paste in the link and uncomment it.
 - [ ] **New copy I wrote.** The text from her draft is unchanged. These parts are new, so she should check they're accurate:
   - the three bullet points on each service card
-  - the "How It Works" steps
+  - the "Signs it's time for a cleaning" lists
+  - the "what happens next" steps in the contact section
   - all FAQ answers (her draft only had the first question)
 - [ ] **Extra details** she may want to add: email address, business hours, license/insurance info, and a list of the cities she serves.
 - [ ] **Let Google list the site.** While it's a draft, `index.html` has a `<meta name="robots" content="noindex">` tag that keeps it out of search results. Delete that line at launch.

@@ -123,7 +123,7 @@ p { margin: 0 0 1em; }
 .header-inner { height: var(--header-h); display: flex; align-items: center; gap: 32px; }
 
 .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--blue); }
-.brand-mark { width: 34px; height: 34px; flex: none; }
+.brand-mark { width: auto; height: 40px; flex: none; }
 .brand-name { font-stretch: 125%; font-weight: 800; letter-spacing: .08em; font-size: 1.05rem; color: var(--navy); }
 
 .site-nav { display: flex; align-items: center; gap: 28px; margin-left: auto; }
@@ -159,7 +159,6 @@ section { padding-block: clamp(64px, 9vw, 112px); }
 .section-blue .sign-list { border-top-color: #fff; }
 .section-blue .sign-list li { border-bottom-color: rgba(255, 255, 255, .3); }
 .section-blue .photo { background: #3d82e0; }
-.section-blue .photo-placeholder { color: rgba(255, 255, 255, .55); }
 
 .section-intro {
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -250,12 +249,13 @@ section { padding-block: clamp(64px, 9vw, 112px); }
   background: #e3e9f0;
 }
 .photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
-.photo-placeholder { position: absolute; inset: 0; display: grid; place-items: center; color: #adbccc; }
-.photo-placeholder svg { width: clamp(56px, 16%, 96px); height: auto; aspect-ratio: 1; }
 .photo-landscape { aspect-ratio: 4 / 3; }
 .photo-portrait { aspect-ratio: 4 / 5; }
 .section-navy .photo { background: #183256; }
-.section-navy .photo-placeholder { color: #3d5f8c; }
+/* keep the people and the van in frame when the photos are cropped */
+.about .photo img { object-position: 58% 50%; }
+.signs .photo img { object-position: 60% 12%; }
+.review .photo img { object-position: 35% 20%; }
 
 /* ---------- About ---------- */
 .about-inner {
